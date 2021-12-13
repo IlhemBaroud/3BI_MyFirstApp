@@ -1,14 +1,18 @@
+import { React } from 'react';
+import { NavLink } from 'react-router-dom'
+const NavBar = ({fullName}) => {
 
-const NavBar = () => {
-    
 return(
     <div>
 
-    <h1 className="my-title">John Doe</h1><br />
+    <h1 className="my-title">
+        {fullName}
+        
+    </h1><br />
     <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li><NavLink to='/about'>About</NavLink></li>
+        <li><NavLink to='/projects'>Projects</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
     </ul>
     </div>);
 }
